@@ -5,12 +5,3 @@
 #include<stdlib.h> //Biblioteca de funções para alocação dinâmica.
 #include"pousada.h"  //Módulo criado.
 
-//Implementação da srtuct Pousada.
-struct pousada
-{
-    char nome[50];
-    int quartos;
-    int localização;
-    char avalização[10];
-}
-
