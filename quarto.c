@@ -14,3 +14,10 @@ struct quarto
     struct quarto *prox;
 };
 
+Quarto *cria_quarto(int quant)
+{
+    int i;
+    for(i = 0; i < quant; i++){
+        
+    }
+}

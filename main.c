@@ -9,10 +9,13 @@ int main(void)
     Pousada *p = cria_pousada();
     imprime_pousada(p);
     Quarto *q = retorna_ponteiro(p);
+    int quant = retorna_quantidade(p);
+    q = cria_quarto(quant);
 
-    if(p != NULL){
+    if(q != NULL){
         int opcao;
         do{
+            printf("------------------------\n");
             printf("--- Menu ---\n");
             printf("------------------------");
             printf("\n");

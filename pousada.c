@@ -41,7 +41,7 @@ Pousada *cria_pousada(void)
     strcpy(p->nome, nome);
     p->quartos = quartos;
     strcpy(p->localizacao, localizacao);
-    strcpy(p->localizacao, avaliacao);
+    strcpy(p->avaliacao, avaliacao);
     p->quarto = NULL;
 
     return p;
@@ -52,6 +52,11 @@ Quarto *retorna_ponteiro(Pousada *p)
     return p->quarto;
 }
 
+int retorna_quantidade(Pousada *p)
+{
+    return p->quartos;
+}
+
 void imprime_pousada(Pousada *p)
 {
     printf("------------------------\n");
@@ -59,7 +64,6 @@ void imprime_pousada(Pousada *p)
     printf("Quantidade de Quartos: %d   \n", p->quartos);
     printf("Localização: %s\n", p->localizacao);
     printf("Avaliação: %s\n", p->avaliacao);
-    printf("------------------------\n");
 }
 
 void libera_pousada(Pousada *p)
