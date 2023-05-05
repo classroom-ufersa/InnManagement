@@ -14,10 +14,25 @@ struct pousada
     Quarto *quarto;
 };
 
-Pousada *cria_pousada(char nome[50], int quartos, char localizacao[50], char avaliacao[10])
+Pousada *cria_pousada(void)
 {
+    char nome[50];
+    int quartos;
+    char localizacao[50];
+    char avaliacao[10];
+
+    printf("\n---CADASTRAR POUSADA---\n");
+    printf("Insira os Dados da Pousada:\n");
+    printf("Nome:");
+    scanf(" %[^\n]s", nome);
+    printf("Quantidade de Quartos:");
+    scanf(" %d", &quartos);
+    printf("Localização da Pousada:");
+    scanf(" %[^\n]s", localizacao);
+    printf("Avaliação da Pousada:");
+    scanf(" %[^\n]s", avaliacao);
+
     Pousada *p = (Pousada*)malloc(sizeof(Pousada));
-    
     if (p == NULL){
         printf("Erro Ao Alocar Memória\n");
         exit(1);
@@ -46,7 +61,6 @@ void imprime_pousada(Pousada *p)
     printf("Avaliação: %s\n", p->avaliacao);
     printf("------------------------\n");
 }
-
 
 void libera_pousada(Pousada *p)
 {

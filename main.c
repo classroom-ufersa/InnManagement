@@ -5,23 +5,8 @@
 
 int main(void)
 {
-    char nome[50];
-    int quartos;
-    char localizacao[50];
-    char avaliacao[10];
-
-    printf("\n---CADASTRAR POUSADA---\n");
-    printf("Insira o Nome da Pousada:");
-    scanf(" %[^\n]s", nome);
-    printf("Insira a Quantidade de Quartos da Pousada:");
-    scanf(" %d", &quartos);
-    printf("Insira a Localização da Pousada:");
-    scanf(" %[^\n]s", localizacao);
-    printf("Insira a Avaliação da Pousada:");
-    scanf(" %[^\n]s", avaliacao);
-
-
-    Pousada *p = cria_pousada(nome, quartos, localizacao, avaliacao);
+    
+    Pousada *p = cria_pousada();
     imprime_pousada(p);
     Quarto *q = retorna_ponteiro(p);
 

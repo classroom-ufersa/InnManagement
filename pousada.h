@@ -2,7 +2,7 @@
 
 typedef struct pousada Pousada;
 
-Pousada *cria_pousada(char nome[50], int quartos, char localizacao[50], char avaliacao[10]);
+Pousada *cria_pousada(void);
 
 Quarto *retorna_ponteiro(Pousada *p);
 
