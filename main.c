@@ -8,9 +8,8 @@ int main(void)
     
     Pousada *p = cria_pousada();
     imprime_pousada(p);
-    Quarto *q = retorna_ponteiro(p);
-    int quant = retorna_quantidade(p);
-    q = cria_quarto(quant);
+    Quarto *q = ponteiro_quarto(p);
+    int quant = quantidade_quarto(p);
 
     if(q != NULL){
         int opcao;

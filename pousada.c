@@ -4,7 +4,6 @@
 #include"pousada.h"
 #include"quarto.h" 
 
-
 struct pousada
 {
     char nome[50];
@@ -47,12 +46,12 @@ Pousada *cria_pousada(void)
     return p;
 }
 
-Quarto *retorna_ponteiro(Pousada *p)
+Quarto *ponteiro_quarto(Pousada *p)
 {
     return p->quarto;
 }
 
-int retorna_quantidade(Pousada *p)
+int quantidade_quarto(Pousada *p)
 {
     return p->quartos;
 }

@@ -1,3 +1,3 @@
 typedef struct quarto Quarto;
 
-Quarto *cria_quarto(int quant);
+Quarto *cria_quarto(Quarto *q, int quant);

@@ -4,9 +4,9 @@ typedef struct pousada Pousada;
 
 Pousada *cria_pousada(void);
 
-Quarto *retorna_ponteiro(Pousada *p);
+Quarto *ponteiro_quarto(Pousada *p);
 
-int retorna_quantidade(Pousada *p);
+int quantidade_quarto(Pousada *p);
 
 void imprime_pousada(Pousada *p);
 

@@ -1,7 +1,8 @@
 #include<stdio.h>  
 #include<string.h> 
 #include<stdlib.h> 
-#include"quarto.h"  
+#include"quarto.h"
+#include"pousada.h"
 
 struct quarto
 {
@@ -14,10 +15,8 @@ struct quarto
     struct quarto *prox;
 };
 
-Quarto *cria_quarto(int quant)
+/*Quarto *cria_quarto(Quarto *q, int quant)
 {
-    int i;
-    for(i = 0; i < quant; i++){
-        
-    }
+   
 }
+*/
