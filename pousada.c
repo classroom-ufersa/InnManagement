@@ -42,7 +42,7 @@ Pousada *cria_pousada(void)
     strcpy(p->localizacao, localizacao);
     strcpy(p->avaliacao, avaliacao);
     p->quarto = NULL;
-
+    system("clear");
     return p;
 }
 
@@ -62,7 +62,6 @@ void imprime_pousada(Pousada *p)
     printf("Quantidade de Quartos: %d   \n", p->quartos);
     printf("Localização: %s\n", p->localizacao);
     printf("Avaliação: %s\n", p->avaliacao);
-    system("clear");
 }
 
 void libera_pousada(Pousada *p)
