@@ -4,10 +4,6 @@
 #include"pousada.h"
 #include"quarto.h" 
 
-#define NOME "Vila Vista"
-#define QUARTOS 5
-#define LOCALIZACAO "Brasil"
-#define AVALIACAO "Ótimo"
 
 struct pousada
 {
@@ -18,28 +14,37 @@ struct pousada
     Quarto *quarto;
 };
 
-Pousada *cria_pousada(void)
+Pousada *cria_pousada(char nome[50], int quartos, char localizacao[50], char avaliacao[10])
 {
     Pousada *p = (Pousada*)malloc(sizeof(Pousada));
+    
     if (p == NULL){
         printf("Erro Ao Alocar Memória\n");
         exit(1);
     }
-    strcpy(p->nome, NOME);
-    p->quartos = QUARTOS;
-    strcpy(p->localizacao, LOCALIZACAO);
-    strcpy(p->avaliacao, AVALIACAO);
+
+    strcpy(p->nome, nome);
+    p->quartos = quartos;
+    strcpy(p->localizacao, localizacao);
+    strcpy(p->localizacao, avaliacao);
     p->quarto = NULL;
 
     return p;
 }
 
+Quarto *retorna_ponteiro(Pousada *p)
+{
+    return p->quarto;
+}
+
 void imprime_pousada(Pousada *p)
 {
-    printf("%s\n", p->nome);
-    printf("%d\n", p->quartos);
-    printf("%s\n", p->localizacao);
-    printf("%s\n", p->avaliacao);
+    printf("------------------------\n");
+    printf("Pousada: %s   \n", p->nome );
+    printf("Quantidade de Quartos: %d   \n", p->quartos);
+    printf("Localização: %s\n", p->localizacao);
+    printf("Avaliação: %s\n", p->avaliacao);
+    printf("------------------------\n");
 }
 
 

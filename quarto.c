@@ -13,3 +13,4 @@ struct quarto
     int duracao_estadia;
     struct quarto *prox;
 };
+
