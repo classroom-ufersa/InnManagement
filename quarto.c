@@ -45,10 +45,12 @@ void imprime_quartos(Quarto *q, int quant_quartos)
     Quarto *quartos;
     int i;
     for(quartos = q; i < quant_quartos; quartos->prox){
+        printf("-------------------------\n");
         printf("Tipo: %s\n", quartos->tipo);
-        printf("Tipo: %d\n", quartos->numero);
-        printf("Tipo: %f\n", quartos->preco);
-        printf("Tipo: %s\n", quartos->status);
+        printf("Número: %d\n", quartos->numero);
+        printf("Preço: R$ %.2f\n", quartos->preco);
+        printf("Status: %s\n", quartos->status);
+        system("clear");
         i++;
     }
 }

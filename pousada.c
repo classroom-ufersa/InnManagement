@@ -58,11 +58,11 @@ int quantidade_quarto(Pousada *p)
 
 void imprime_pousada(Pousada *p)
 {
-    printf("------------------------\n");
     printf("Pousada: %s   \n", p->nome );
     printf("Quantidade de Quartos: %d   \n", p->quartos);
     printf("Localização: %s\n", p->localizacao);
     printf("Avaliação: %s\n", p->avaliacao);
+    system("clear");
 }
 
 void libera_pousada(Pousada *p)

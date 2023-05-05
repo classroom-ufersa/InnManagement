@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    
+    system("clear");
     Pousada *p = cria_pousada();
     imprime_pousada(p);
     Quarto *q = ponteiro_quarto(p);
