@@ -1,3 +1,5 @@
 typedef struct quarto Quarto;
 
-Quarto *cria_quarto(Quarto *q, int quant);
+void *cria_quarto(Quarto *q);
+
+void imprime_quartos(Quarto *q, int quant_quartos);

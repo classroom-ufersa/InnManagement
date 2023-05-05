@@ -9,13 +9,17 @@ int main(void)
     Pousada *p = cria_pousada();
     imprime_pousada(p);
     Quarto *q = ponteiro_quarto(p);
-    int quant = quantidade_quarto(p);
+    int i,quant_quartos = quantidade_quarto(p);
+    for(i = 0; i < quant_quartos; i++){
+        q = cria_quarto(q);
+    }
+    imprime_quartos(q, quant_quartos);
 
     if(q != NULL){
         int opcao;
         do{
             printf("------------------------\n");
-            printf("--- Menu ---\n");
+            printf("---      Menu        ---\n");
             printf("------------------------");
             printf("\n");
             printf("[1] - Adicionar Hospede\n");

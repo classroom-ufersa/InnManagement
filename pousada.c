@@ -20,7 +20,7 @@ Pousada *cria_pousada(void)
     char localizacao[50];
     char avaliacao[10];
 
-    printf("\n---CADASTRAR POUSADA---\n");
+    printf("\n---Sistema de Gerenciamento de Pousada---\n");
     printf("Insira os Dados da Pousada:\n");
     printf("Nome:");
     scanf(" %[^\n]s", nome);
