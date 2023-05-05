@@ -1,31 +1,48 @@
-#include<stdio.h>
+#include<stdio.h> 
+#include<string.h> 
+#include"pousada.h"
+#include"quarto.h"
 
 int main(void)
 {
-    //Declaração das seguintes variáves:
-    int opcao1;
+    
+    Pousada *p = cria_pousada();
+    imprime_pousada(p);
+    Quarto *q = ponteiro_quarto(p);
+    int quant = quantidade_quarto(p);
 
-    //Laço de repetição para o menu de opção.
-    do{
+    if(q != NULL){
+        int opcao;
+        do{
+            printf("------------------------\n");
+            printf("--- Menu ---\n");
+            printf("------------------------");
+            printf("\n");
+            printf("[1] - Adicionar Hospede\n");
+            printf("[2] - Remover Hospede\n");
+            printf("[3] - Listar Hospedes Cadastrados\n");
+            printf("[4] - Buscar Hospedes\n");
+            printf("[5] - Editar Cadastro de Hospede\n");
+            printf("[6] - Consultar Quartos Disponíveis\n");
+            printf("[7] - Consultar Quantitativo de Quartos por Status\n");
+            printf("[8] - Sair\n");
+            printf("Digite Uma Opção:\n");
+            scanf(" %d", &opcao);
 
-        //Pergunta ao usuário o que ele deseja.
-        printf("------------------------\n");
-        printf("---  MENU DE OPÇÕES  ---\n");
-        printf("------------------------");
-        printf("\n");
-        printf("[1] - Adicionar Hospede\n");
-        printf("[2] - Remover Hospede\n");
-        printf("[3] - Listas Hospedes Cadastrados\n");
-        printf("[4] - Buscar Hospedes\n");
-        printf("[5] - Editar Cadastro de Hospede\n");
-        printf("[6] - Consultar Quarrtos Disponíveis\n");
-        printf("[7] - Consultar Quantitativo de Quartos por Status\n");
-        printf("[8] - Sair\n");
-        printf("Digite Uma Opção:\n");
-        scanf(" %d", &opcao1);
+            switch (opcao)
+            {
+            case 1:
+            
+
+            case 8:
+                break;
+            default:printf("Opção Inválida.\n");
+            }
+        
+        }
+        while(opcao != 8);
     }
-    //Condição para sair do laço de repetição.
-    while(opcao1 != 8);
 
+    libera_pousada(p);
     return 0;
 }
