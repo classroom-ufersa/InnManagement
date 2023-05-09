@@ -37,6 +37,9 @@ int main(void)
             {
             case 1:
             
+            case 6:
+                lista_quartos(q); break;
+            case 7:
 
             case 8:
                 break;

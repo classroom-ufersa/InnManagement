@@ -55,4 +55,20 @@ void imprime_quartos(Quarto *q, int quant_quartos)
     }
 }
 
+void lista_quartos(Quarto *q)
+{
+
+    printf("Quartos disponíveis:\n");
+    while (q != NULL)
+    {
+        if (strcmp(q->status, "disponível") == 0){
+            printf("Tipo: %s\n", q->tipo);
+            printf("Número: %d\n", q->numero);
+            printf("Preço: %.2f\n", q->preco);
+            printf("--------\n\n\n");
+        }
+        q = q->prox;
+    }
+}
+
 
