@@ -57,7 +57,6 @@ void imprime_quartos(Quarto *q, int quant_quartos)
 
 void lista_quartos(Quarto *q)
 {
-
     printf("Quartos disponíveis:\n");
     while (q != NULL)
     {
@@ -69,6 +68,24 @@ void lista_quartos(Quarto *q)
         }
         q = q->prox;
     }
+}
+
+void quantidade_status(Quarto *q)
+{
+    int quant_disponivel = 0, quant_indisponivel = 0;
+    while (q != NULL)
+    {
+        if (strcmp(q->status, "disponível") == 0){
+            quant_disponivel++;
+        }
+        else{
+            quant_indisponivel++;
+        }
+        q = q->prox;
+    }
+
+    printf("Quantidade de Quartos Disponíveis: %d\n", quant_disponivel);
+    printf("Quantidade de Quartos Indisponíveis: %d\n", quant_indisponivel);
 }
 
 

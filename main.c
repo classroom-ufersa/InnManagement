@@ -40,7 +40,7 @@ int main(void)
             case 6:
                 lista_quartos(q); break;
             case 7:
-
+                quantidade_status(q); break;
             case 8:
                 break;
             default:printf("Opção Inválida.\n");
